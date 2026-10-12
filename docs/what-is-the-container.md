@@ -75,14 +75,11 @@ The container is OCI-compliant and runs on any modern container runtime.
 
 Host platforms. The image provides `linux/amd64` and `linux/arm64` variants; container runtimes select the matching architecture automatically.
 
-| Host OS | Architecture | Status           |
-| ------- | ------------ | ---------------- |
-| macOS   | x86_64       | Supported        |
-| macOS   | ARM64        | Supported        |
-| Linux   | x86_64       | Supported        |
-| Linux   | ARM64        | Supported        |
-| Windows | x86_64       | Supported (WSL2) |
-| Windows | ARM64        | Supported (WSL2) |
+| Host OS | Architecture  | Status           |
+| ------- | ------------- | ---------------- |
+| macOS   | x86_64, ARM64 | Supported        |
+| Linux   | x86_64, ARM64 | Supported        |
+| Windows | x86_64, ARM64 | Supported (WSL2) |
 
 See [Prerequisites](prerequisites.md) for setup details and [Known limitations](known-limitations.md) for current gaps.
 
