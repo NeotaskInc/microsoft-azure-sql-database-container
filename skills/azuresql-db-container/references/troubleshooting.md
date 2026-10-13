@@ -118,9 +118,9 @@ docker run -d --name sqldb -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=$MSSQL_SA_PA
 
 ## Stale image (missing a recent fix)
 
-The engine behaves like an older build, or a fix you expected is not present. `:latest` is a moving tag and
-the Private Preview image is rebuilt almost daily, but `docker run` reuses the `:latest` already on disk
-(Docker's default pull policy is `missing`) and never re-checks the registry. Refresh and recreate:
+The engine behaves like an older build, or a fix you expected is not present. `:latest` is a moving tag, but
+`docker run` reuses the `:latest` already on disk (Docker's default pull policy is `missing`) and never
+re-checks the registry. Pull to check for a newer build, then recreate:
 
 ```bash
 docker pull sqldbpreview-dpgaeqhmgphzd4bk.azurecr.io/azure-sql/db-dev:latest
