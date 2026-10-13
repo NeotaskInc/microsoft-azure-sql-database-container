@@ -79,9 +79,9 @@ until docker exec sqldb /opt/mssql-tools18/bin/sqlcmd -S localhost -U sa -P "$MS
 echo "ready on localhost,$HOST_PORT"
 ```
 
-**Keep the image current.** The Private Preview image is rebuilt almost daily. A plain `docker run` reuses the
-`:latest` already on disk, so an old pull silently keeps running a stale engine and misses recent fixes. Pull
-before you start (after `docker login`) to get the newest build:
+**Keep the image current.** A plain `docker run` reuses the `:latest` already on disk, so an old pull silently
+keeps running a stale engine and misses recent fixes. Pull before you start (after `docker login`) to check for
+a newer build:
 
 ```bash
 docker pull sqldbpreview-dpgaeqhmgphzd4bk.azurecr.io/azure-sql/db-dev:latest
