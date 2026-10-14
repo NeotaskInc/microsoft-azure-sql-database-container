@@ -27,7 +27,6 @@ Problems carried over from the SQL Server image:
 - App connects to `master`; the Azure engine will not auto-create a user DB and
   `master` is for provisioning only.
 - No readiness wait; the engine is not ready when the container starts.
-- No `platform` override; the runtime selects the matching Azure image architecture automatically.
 
 ## After (Azure SQL Database container)
 
